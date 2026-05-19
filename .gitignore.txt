@@ -1,0 +1,5 @@
+.vscode
+*.psd
+*.ai
+*.zip
+*.rar

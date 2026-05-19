@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "AtyanDsegh";
+    src: url("./font/Montserratarm-Regular.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "AtyanDsegh1";
+    src: url("./font/Montserratarm-Thin.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "AtyanDsegh2";
+    src: url("./font/Montserratarm-Light.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0f0f0f;
+    padding: 5px 15px 0 15px;
+}
+.het-glavni{
+    margin: 20px 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #252525;
+    position: fixed;
+}
+.verev>a{
+    color: #eaeaea;
+    text-decoration: none;
+}
+.verev>h1{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    color: #eaeaea;
+    font-family: "AtyanDsegh1";
+    padding-top: 5px;
+}
+.patuhan{
+    display: flex;
+}
+.qart{
+    display: flex;
+    gap: 20px;
+}
+.nkar{
+    width: 150px;
+    height: 150px;
+}

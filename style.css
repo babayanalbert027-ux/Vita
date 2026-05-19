@@ -1,0 +1,548 @@
+@font-face {
+    font-family: "AtyanDsegh";
+    src: url("./font/Montserratarm-Regular.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "AtyanDsegh1";
+    src: url("./font/Montserratarm-Thin.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "AtyanDsegh2";
+    src: url("./font/Montserratarm-Light.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "AtyanDsegh3";
+    src: url("./font/Montserratarm-SemiBold.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: #0f0f0f;    
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 5px 15px;
+    transition: 0.3s ease-in;
+    transform: translateY(0);
+}
+nav.sovorakan{
+    background: transparent;
+    backdrop-filter: none;
+}
+nav.apaki{
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.3);
+}
+nav.pahel{
+    transform: translateY(-100%);
+}
+nav>ul>li>a{
+    font-family: "AtyanDsegh1";
+    text-decoration: none;
+    color: #eaeaea;
+    font-size:20px;
+    font-weight: 900;
+    position: relative;
+    display: inline-block;
+}
+nav>ul>li>a::after,
+nav>ul>li>a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2.3px;
+    border-radius: 10px;
+    background-color: #f02d06;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-out;
+}
+nav>ul>li>a:hover::before {
+  transform: scaleX(1);
+}
+nav>ul{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    list-style: none;
+    gap: 110px;
+}
+.verevi-logo{
+    width: 120px;
+    height: auto;
+}
+#join{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "AtyanDsegh1";
+    width: 115px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #eaeaea;
+    background: none;
+    color: #eaeaea;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+}
+#join:hover{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "AtyanDsegh2";
+    width: 115px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid #f02d06;
+    background: none;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+}
+#popup2,
+#popup{
+    font-family: "AtyanDsegh2";
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    backdrop-filter: blur(8px);
+    background:rgba(0,0,0,0.3);
+    justify-content:center;
+    align-items:center;
+    z-index: 5000;
+}
+#popup2-content{
+    background: #18181891;
+    padding:5px 15px;
+    border-radius:10px;
+    width:400px;
+    box-shadow: 0 0 30px 5px;
+}
+#popup-content{
+    background: #18181891;
+    padding:5px 15px;
+    border-radius:10px;
+    width:300px;
+    box-shadow: 0 0 30px 5px;
+}
+#popup-content>div>h2{
+    display: flex;
+    justify-content: center;
+    color: #f02d06;
+    margin-bottom: 15px;
+}
+#popup2-content>h2{
+    display: flex;
+    justify-content: center;
+    color: #f02d06;
+    margin-bottom: 15px;
+}
+#popup-content>div>input{
+    border-radius: 10px;
+    height: 30px;
+    margin-left: 45px;
+    margin-top: 6px;
+    border: 1px solid #f02d06;
+    background-color: #f02d062d;
+    padding: 8px;
+    color: #eaeaea;
+    transition: 0.3s;
+    outline: none;
+}
+#popup-content>div>input:focus{
+    outline: none;
+    border: 2px solid #0f0f0f;
+    background-color: #84848474;
+}
+#popup-content>div>p{
+    font-size: 11px;
+    color: #eaeaea;
+    margin-bottom: 7px;
+}
+#popup2-content>button{
+    cursor: pointer;
+    margin-left: 140px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f02d062d;
+    border: 1px solid #f02d06;
+    width: 90px;
+    height: 25px;
+    border-radius: 12px;
+    color: #eaeaea;
+}
+#grancvelu>button{
+    cursor: pointer;
+    margin-left: 90px;
+    margin-top: 10px;
+    background-color: #f02d062d;
+    border: 1px solid #f02d06;
+    width: 90px;
+    height: 25px;
+    border-radius: 12px;
+    color: #eaeaea;
+}
+#mtnelu>button{
+    cursor: pointer;
+    margin-left: 80px;
+    margin-top: 10px;
+    background-color: #f02d062d;
+    border: 1px solid #f02d06;
+    width: 108px;
+    height: 25px;
+    border-radius: 12px;
+    color: #eaeaea;
+}
+#popup-content>div>p>button{
+    margin-top: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: #f02d0600;
+    border:none;
+    color: #f02d06;
+    font-size: 15px;
+}
+#popup.cuyc{
+    display: flex;
+}
+#popup2.cuyc{
+    display: flex;
+}
+#popup2-content>span,
+#pakel{
+    cursor: pointer;
+    color: #eaeaea;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+.navi-tak{
+    padding-top: 15px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+#kofener{
+    font-family: 'AtyanDsegh1';
+    color: #eaeaea;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    background-color:#0f0f0f;
+}
+.a1{
+    display: flex;
+    justify-content: space-between;
+}
+.verevi-tox{
+    display: flex;
+    gap: 45px;
+}
+.nerqevi-tox{
+    display: flex;
+    gap: 45px;
+}
+.arajin-qart{
+    border: 2px solid rgb(117, 43, 0);
+    height: 300px;
+    background-size: cover;
+    border-radius:25px;
+    transition: 0.3s ease-out;
+}
+.arajin-qart:hover{
+    border: 2px solid #f02d06;
+    scale: 1.025;
+    box-shadow: 0px 0px 35px #f02d06;
+}
+main>section>h2{
+    font-family: 'AtyanDsegh1';
+    color: #eaeaea;
+    font-size: 50px;
+    text-align: center;
+}
+.gifik{
+    height: 643px;
+    border-radius: 25px;
+    border: 2px solid rgb(117, 43, 0);
+    transition: 0.3s ease-out;
+}
+.gifik:hover{
+    border: 2px solid #f02d06;
+    box-shadow: 0px 0px 25px #f02d06;
+}
+#chayer{
+    font-family: 'AtyanDsegh1';
+    color: #eaeaea;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    background-color:#0f0f0f ;
+}
+#seter{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    background-color:#0f0f0f ;
+}
+.arajin-set{
+    background-image: url(./VITA/Gemini_Generated_Image_8vzt2v8vzt2v8vzt.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    border-radius: 25px;
+    transition: 0.3s ease-out;
+    border: 2px solid rgb(117, 43, 0);
+}
+.arajin-set1{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 780px;
+}
+#seter>a{
+    text-decoration: none;
+}
+#seter>a>div>h2{
+    color: #eaeaea;
+    font-family: 'AtyanDsegh1';
+    font-size: 50px;
+    text-align: center;
+}
+.arajin-set1>ul>li{
+    color: #eaeaea;
+    text-decoration: none;
+    font-size: 32px;
+    font-family: 'AtyanDsegh2';
+}
+.erkrord-set{
+    background-image: url(./VITA/Gemini_Generated_Image_2j5wdb2j5wdb2j5w.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    border-radius: 25px;
+    transition: 0.3s ease-out;
+    border: 2px solid rgb(117, 43, 0);
+}
+.arajin-set:hover{
+    transform: translateY(-5px);
+    border: 2px solid #f02d06;
+    box-shadow: 0px 0px 25px #f02d06;
+}
+.erkrord-set:hover{
+    transform: translateY(-5px);
+    border: 2px solid #f02d06;
+    box-shadow: 0px 0px 25px #f02d06;
+}
+#mer-masin{
+    font-family: 'AtyanDsegh1';
+    color: #eaeaea;
+    padding:5px 50px 0 50px;
+    background-color:#0f0f0f ;
+}
+#mer-masin>h2{
+    color: #eaeaea;
+    font-family: 'AtyanDsegh1';
+    font-size: 50px;
+    text-align: center;
+}
+.mer-masin1{
+    display: flex;
+    gap: 20px;
+}
+.taki-text{
+    width: 50%;
+}
+.taki-text>h3{
+    text-align: center;
+    font-size: 33px;
+}
+.taki-text>p{
+    font-size: 25px;
+    padding: 0 10px;
+}
+.taki-qart{
+    width: 50%;
+    text-align: center;
+}
+.taki-qart>h3{
+    font-size: 33px;
+}
+.taki-qart1{
+    background-image: url(./VITA/Без\ названия\ \(6\).jpg);
+    height: 170px;
+    background-size: cover;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid rgb(117, 43, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+.taki-qart2{
+    background-image: url(./VITA/Без\ названия\ \(6\).jpg);
+    height: 170px;
+    background-size: cover;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid rgb(117, 43, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+.taki-qart3{
+    background-image: url(./VITA/Без\ названия\ \(6\).jpg);
+    height: 170px;
+    background-size: cover;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid rgb(117, 43, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+.taki-qart1 h4{
+    transform: translateY(50px);
+    transition: 0.4s ease;
+}
+.taki-qart2 h4{
+    transform: translateY(55px);
+    transition: 0.4s ease;
+}
+.taki-qart3 h4{
+    transform: translateY(40px);
+    transition: 0.4s ease;
+}
+.taki-qart p{
+    transition: 0.4s ease;
+}
+.taki-qart>div>h4{
+    font-size: 46px;
+    font-family: "AtyanDsegh3";
+}
+.taki-qart>div>p{
+    opacity: 0;
+    font-size: 19px;
+    transform: translateY(50px);
+    font-family: "AtyanDsegh2";
+}
+.taki-qart1:hover h4{
+    transform: translateY(-7px);
+    font-size: 24px;
+    font-family: "AtyanDsegh3";
+}
+.taki-qart2:hover h4{
+    transform: translateY(-3px);
+    font-size: 24px;
+    font-family: "AtyanDsegh3";
+}
+.taki-qart3:hover h4{
+    transform: translateY(-7px);
+    font-size: 24px;
+    font-family: "AtyanDsegh3";
+}
+.taki-qart1:hover p{
+    font-size: 19px;
+    opacity: 100;
+    transform: translateY(-2px);
+}
+.taki-qart2:hover p{
+    font-size: 19px;
+    opacity: 100;
+    transform: translateY(-2px);
+}
+.taki-qart3:hover p{
+    font-size: 19px;
+    opacity: 100;
+    transform: translateY(-2px);
+}
+.taki-qart1:hover{
+    border: 2px solid #f02d06;
+    box-shadow: 0 0 25px #f02d06;
+}
+.taki-qart2:hover{
+    border: 2px solid #f02d06;
+    box-shadow: 0 0 25px #f02d06;
+}
+.taki-qart3:hover{
+    border: 2px solid #f02d06;
+    box-shadow: 0 0 25px #f02d06;
+}
+footer{
+    background-color: #181818;
+    
+}
+footer>div>div>h3{
+    font-family: "AtyanDsegh1";
+    font-size: 35px;
+}
+.nerqev{
+    color: #eaeaea;
+    display: flex;
+}
+.kontakt{
+    width: 50%;
+    text-align: center;
+    padding-left: 170px;
+}
+.gic1{
+    padding: 120px 30px 0 30px;
+}
+.gic{
+    width: 2px;
+    height: 100px;
+    background-color: #464646;
+    display: flex;
+}
+.soc{
+    width: 50%;
+    text-align: center;
+    padding-right: 220px;
+}
+.taki-iconner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}

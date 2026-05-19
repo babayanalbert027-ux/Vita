@@ -1,0 +1,160 @@
+@font-face {
+    font-family: "AtyanDsegh";
+    src: url("./font/Montserratarm-Regular.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "AtyanDsegh1";
+    src: url("./font/Montserratarm-Thin.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "AtyanDsegh2";
+    src: url("./font/Montserratarm-Light.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0f0f0f;
+    padding: 5px 15px 0 15px;
+}
+.het-glavni{
+    margin: 20px 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #252525;
+    position: fixed;
+}
+.verev>a{
+    color: #eaeaea;
+    text-decoration: none;
+}
+.text>h1{
+    font-family: "AtyanDsegh1";
+    color: #eaeaea;
+    display: flex;
+    font-size: 40px;
+}
+.himn{
+    padding: 15px 70px;
+    display: flex;
+
+}
+.taki-nkarner{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+#nkar{
+    width: 550px;
+    box-shadow: 0 0 30px ;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+}
+.taki.aktiv{
+    border: 2px solid #f02d06;
+    opacity: 1;
+}
+.taki{
+    width: 122px;
+    border-radius: 10px;
+    border: 2px solid #eaeaea;
+    opacity: 0.4;
+    cursor: pointer;
+}
+#dzax,
+#aj{
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: #eaeaea;
+    cursor: pointer;
+}
+.gram{
+    font-family: "AtyanDsegh";
+    font-size: 25px;
+    color: #f02d06;
+}
+.bnutagir{
+    font-family: "AtyanDsegh1";
+    font-size: 20px;
+    color: #eaeaea;
+}
+.hatkanish{
+    font-family: "AtyanDsegh2";
+    display: flex;
+    align-items: center;
+    color: #eaeaea;
+    gap: 10px;
+}
+.gin{
+    font-family: "AtyanDsegh";
+    font-size: 35px;
+    color: #f02d06;
+}
+#gnum{
+    display: flex;
+}
+#minus,
+#plus{
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: #f02d06;
+    cursor: pointer;
+}
+#qanak{
+    font-family: "AtyanDsegh2";
+    font-size: 25px;
+    color: #eaeaea;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+}
+.qanak{
+    display: flex;
+}
+#gnum{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+#zambyux{
+    font-family: "AtyanDsegh2";
+    width: 210px;
+    height: 40px;
+    background: #f02d0661;
+    border: 2px solid #f02d06;
+    color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+#zagruzka{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 9999;
+    transition: 0.5s;
+}
+#zagruzka.pahel{
+    opacity: 0;
+    visibility: hidden;
+}
