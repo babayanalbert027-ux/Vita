@@ -35,6 +35,11 @@ document.querySelectorAll('nav ul a').forEach(link =>{
         }, 2500);
     });
 });
+document.getElementById('verev').addEventListener("click", ()=>{
+    window.scrollTo({
+        top:0
+    });
+});
 const popup = document.getElementById('popup');
 const popup2 = document.getElementById('popup2')
 const join = document.getElementById('join');
@@ -45,7 +50,6 @@ const mtnelu = document.getElementById('mtnelu');
 let dursgal = document.getElementById('durs-gal')
 join.addEventListener("click", ()=>{
     let aktiv = localStorage.getItem("aktiv")
-    
     if(aktiv){
       popup2.classList.add("cuyc") 
       document.body.style.overflow = "hidden" 
@@ -93,22 +97,47 @@ grancvel.addEventListener("click", () => {
     let anun = document.getElementById('anun1').value.trim();
     let parol = document.getElementById('parol1').value.trim();
     let mail = document.getElementById('mail').value.trim();
+    let erroranun1 = document.getElementById('error-anun1');
+    let errormail = document.getElementById('error-mail');
+    let errorparol1 = document.getElementById('error-parol1');
+    let zgushacum = document.getElementById('popup-alert');
+    let zgushacum1 = document.getElementById('alert-text');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const erkar = parol.length
 
-    if(anun == "" || parol == "" || mail ==""){
-        alert("Լրացրու բոլոր դաշտերը");
-        return;
+    erroranun1.innerText =""
+    errorparol1.innerText =""
+    errormail.innerText =""
+    let sxal = false;
+    if(anun == ""){
+        erroranun1.innerText ="Լրացրու մուտքանուն դաշտը";
+        sxal = true;
+    }
+    if(erkar < 8){
+        errorparol1.innerText ="Պետք է պարունակի առնվազն 8 սիմվոլ";
+        sxal = true;
+    }
+    if(mail ==""){
+        errormail.innerText ="Լրացրու Էլ․հասցե դաշտը";
+        sxal = true
+    }
+    if(!emailRegex.test(mail)){
+        errormail.innerText ="Տվյալ Էլ․ հասցեն չի գտնվել";
+        sxal = true
+    }
+    if(sxal){
+        return
     }
     let userner = JSON.parse(localStorage.getItem("userner")) || [];
     let krkrnvox = userner.find(user => user.anun === anun);
     let krknvoxMail = userner.find(user => user.mail === mail)
-
     if(krkrnvox){
-        alert("Այս մուտքանունով օգտատեր արդեն կա");
+        erroranun1.innerText ="Այս մուտքանունով օգտատեր արդեն կա";
         document.getElementById('anun1').value = "";
         return;
     }
     if(krknvoxMail){
-        alert("Այս էլ․ հասցեով օգտատեր արդեն կա");
+        errormail.innerText ="Այս էլ․ հասցեով օգտատեր արդեն կա";
         document.getElementById('mail').value = "";
         return;
     }
@@ -118,41 +147,67 @@ grancvel.addEventListener("click", () => {
         mail:mail,
     })
     localStorage.setItem("userner", JSON.stringify(userner));
-    alert("Գրանցումը հաջողվեց");
-     
     grancvelu.style.display = "none";
-    mtnelu.style.display = "block";
+    zgushacum1.innerText ="Գրանցումը հաջողվեց"
+    zgushacum.style.display = "flex"
+    setTimeout(() =>{
+        mtnelu.style.display = "block";
+        zgushacum.style.display ="none";
+        zgushacum1.innerText ="";
+    },1000)
+    
 
     document.getElementById('anun1').value = "";
     document.getElementById('parol1').value = "";
     document.getElementById('mail').value = "";
 
 })
-
 mtnel.addEventListener("click",()=>{
     stugel()
     let login = document.getElementById('anun').value.trim();
     let pasword = document.getElementById('parol').value.trim();
-
+    let erroranun = document.getElementById('error-anun');
+    let errorparol = document.getElementById('error-parol')
     let userner = JSON.parse(localStorage.getItem("userner")) || [];
+    let zgushacum = document.getElementById('popup-alert');
+    let zgushacum1 = document.getElementById('alert-text');
+    let sxal = false
     let grancvac = userner.find(user =>
         user.anun === login &&
         user.parol === pasword
     )
-    if(login=="" || pasword ==""){
-            alert("Լրացրու բոլոր դաշտերը")
-            return;
-        }
+    erroranun.innerText ="";
+    errorparol.innerText ="";
+    if(login==""){
+        erroranun.innerText ="Լրացրու մուտքանուն դաշտը";
+        sxal = true
+    }
+    if(pasword==""){
+        errorparol.innerText ="Լրացրու գաղտնաբառ դաշտը";
+        sxal = true
+    }
+    if(sxal){
+        return
+    }
     if(grancvac){
-        localStorage.setItem("aktiv", login)
-        alert("Բարի գալուստ" + login);
+        localStorage.setItem("aktiv", JSON.stringify(grancvac));
+        zgushacum1.innerText =`Բարի գալուստ, ${login}`;
+        zgushacum.style.display = "flex"
+        mtnelu.style.display ="none"
+        setTimeout(() =>{
+            popup.classList.remove('cuyc');
+            document.body.style.overflow = "auto"
+            mtnelu.style.display ="block"
+            zgushacum.style.display ="none";
+            zgushacum1.innerText ="";
+        },1000)
         document.getElementById('anun').value = "";
         document.getElementById('parol').value = "";
-        popup.classList.remove('cuyc');
         stugel()
     }
     else{
-        alert("Սխալ մուտքանուն կամ գաղտնաբառ")
+        erroranun.innerText ="Սխալ մուտքանուն կամ գաղտնաբառ";
+        errorparol.innerText ="Սխալ մուտքանուն կամ գաղտնաբառ";
         document.getElementById('anun').value = "";
         document.getElementById('parol').value = "";
     }
@@ -160,13 +215,102 @@ mtnel.addEventListener("click",()=>{
 function stugel(){
     let aktiv = localStorage.getItem("aktiv")
     if(aktiv){
+        aktiv = JSON.parse(aktiv);
         join.innerHTML=`
 <svg width="22" height="22" viewBox="0 0 24 24" fill="#eaeaea">
 <path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/>
 </svg>
-` + aktiv
+` + aktiv.anun
     }
     else{
         join.innerHTML ="Միանալ"
     }
 }
+stugel()
+
+
+emailjs.init("kac_Mn8StJkoESEsC");
+let contactForm = document.getElementById('contact-form');
+function setError(fieldName, message) {
+    const errorElement = document.querySelector(
+        `[data-error-for="${fieldName}"]`
+    );
+    if (errorElement) {
+        errorElement.innerText = message;
+    }
+}
+function clearErrors() {
+    document.querySelectorAll('.error').forEach((error) => {
+        error.innerText = "";
+    });
+}
+contactForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    clearErrors();
+
+
+    let anun = document.getElementById('name').value.trim();
+    let namak = document.getElementById('namak').value.trim();
+    let aktiv = localStorage.getItem("aktiv")
+    let eror = false
+    if (!aktiv){
+        setError("name", "Մուտք գործեք համակարգ");
+        setError("namak", "Մուտք գործեք համակարգ");
+        return;
+    }
+    if (anun === "") {
+        setError("name", "Լրացրու անունը");
+        eror = true;
+    }
+    if (namak === "") {
+        setError("namak", "Լրացրու հաղորդագրությունը");
+        eror = true;
+    }
+    if(eror){
+        return
+    }
+    aktiv = JSON.parse(aktiv);
+    let userMail = aktiv.mail;
+    let zgushacum = document.getElementById('popup-alert');
+    let zgushacum1 = document.getElementById('alert-text');
+    let popup = document.getElementById('popup');
+    let mtnelu = document.getElementById('mtnelu');
+    let grancvelu = document.getElementById('grancvelu');
+    let pakel = document.getElementById('pakel')
+    emailjs.send(
+        "service_ab6p2pb",
+        "template_89h0uuh",
+        {
+            from_name: anun,
+            message: namak,
+            user_email: userMail
+        }
+    )
+    .then(() => {
+        zgushacum1.innerText ="Հաղորդագրությունն ուղարկվել է"
+        popup.style.display = "flex"
+        mtnelu.style.display = "none"
+        grancvelu.style.display = "none"
+        pakel.style.display = "none"
+        zgushacum.style.display = "flex"
+        document.body.style.overflow ="hiden"
+        setTimeout(() =>{
+            zgushacum.style.display ="none";
+            popup.style.display = "none"
+            zgushacum1.innerText ="";
+            document.body.style.overflow ="auto"
+        },1500)
+        contactForm.reset();
+    })
+    .catch((error) => {
+        console.log(error);
+        alert("Սխալ է տեղի ունեցել");
+    });
+});
+let burger = document.getElementById('burger');
+let ull = document.getElementsByClassName('ull')[0];
+burger.addEventListener("click",()=>{
+
+    ull.classList.toggle("aktiv");
+
+});

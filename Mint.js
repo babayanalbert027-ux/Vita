@@ -4,10 +4,10 @@ let aj = document.getElementById('aj')
 let dzax = document.getElementById('dzax')
 
 let nkarner =[
-    "VITA/Arabika.qart.jpg",
-    "nkar/Arabic.jpg",
-    "nkar/kofe1.jpg",
-    "nkar/kofe2.jpg"
+    "VITA/urc.qart.jpg",
+    "nkar/mint1.jpg",
+    "nkar/mint2.jpg",
+    "nkar/mint3.jpg"
 ];
 
 let hamar = 0;
@@ -62,10 +62,10 @@ setTimeout(() =>{
 
 let zambyux = document.getElementById('zambyux');
 let apranq = {
-    id:1,
-    anun:"Սուրճ արաբիկա",
+    id:7,
+    anun:"Ուրցով և անանուխով թեյ",
     gin:2500,
-    nkar:"./VITA/Arabika.qart.jpg"
+    nkar:"./VITA/urc.qart.jpg"
 }
 zambyux.addEventListener("click", ()=>{
     let qart = JSON.parse(localStorage.getItem("qart")) || [];

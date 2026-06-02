@@ -6,162 +6,155 @@
     <title>VITA</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="img/png" href="./VITA/gunavor logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <header>
         <section id="headerr">
             <nav>
-                <a href="#headerr"><img class="verevi-logo" src="./VITA/gazaraguyn logo.png" alt=""></a>
-                <ul>
+                <div id="burger"><img src="./nkar/burger.png" alt=""></div>
+                <ul class="ull">
+                    <button id="verev"><img class="verevi-logo" src="./VITA/gazaraguyn logo.png" alt=""></button>
                     <li><a class="aa" href="#kofener">Սուրճերի բաժին</a></li>
                     <li><a class="aa" href="#chayer">Թեյերի բաժին</a></li>
                     <li><a class="aa" href="#seter">Սեթեր</a></li>
                     <li><a class="aa" href="#mer-masin">Մեր Մասին</a></li>
-                    <li><a class="aa" href="./zambyux.html"><img height="30" src="./VITA/shopping-cart.png" alt=""></a></li>
+                    <li><a class="aa" href="#contact-us">Կապ</a></li>
+                    <li><a class="aa" href="./zambyux.html"><img src="./VITA/shopping-cart.png" alt=""></a></li>
                 </ul>
-                <button id="join">Միանալ</button>
+                <button id="join"></button>
             </nav>
             <div id="popup">
                 <div id="popup-content">
                     <span id="pakel">&times;</span>
                     <div id="mtnelu">
                         <h2>Մուտք</h2>
-                        <input id="anun" placeholder="Մուտքանուն"><br>
-                        <input id="parol" type="password" placeholder="Գաղտնաբառ"><br>
-                        <button>Մուտք Գործել</button>
+                        <div class="df">
+                            <input id="anun" placeholder="Մուտքանուն">
+                            <small id="error-anun"></small>
+                            <input id="parol" type="password" placeholder="Գաղտնաբառ">
+                            <small id="error-parol"></small>
+                        </div>
+                        <div class="kojak">
+                            <button>Մուտք Գործել</button>
+                        </div>
                         <p>Դեռ գրանցված չե՞ս <button type="button" id="grancvel"> Գրանցվել</button></p>
                     </div>
                     <div id="grancvelu" style="display:none;">
                         <h2>Գրանցում</h2>
-                        <input id="anun1" placeholder="Մուտքանուն"><br>
-                        <input id="mail" type="email" placeholder="Էլ․ հասցե">
-                        <input id="parol1" type="password" placeholder="Գաղտնաբառ"><br>
-                        <button>Գրանցվել</button>
+                        <div class="df">
+                            <input id="anun1" placeholder="Մուտքանուն">
+                            <small id="error-anun1"></small>
+                            <input id="mail" type="email" placeholder="Էլ․ հասցե">
+                            <small id="error-mail"></small>
+                            <input id="parol1" type="password" placeholder="Գաղտնաբառ">
+                            <small id="error-parol1"></small>
+                        </div>
+                        <div class="kojak">
+                            <button>Գրանցվել</button>
+                        </div>
                         <p>Արդեն գրանցվել ե՞ս <button type="button" id="mtnel"> Մուտք Գործել</button></p>
+                    </div>
+                    <div id="popup-alert" style="display: none;">
+                        <img src="./nkar/ptichka.png" alt="">
+                        <p id="alert-text"></p>
                     </div>
                 </div>
             </div>
             <div id="popup2">
                 <div id="popup2-content">
                     <span id="pakel2">&times;</span>
-                    <h2>Ուզում ես դու՞րս գալ հաշվից</h2>
-                    <button id="durs-gal" type="button">Դուրս գալ</button>
+                    <div>
+                        <h2>Ուզում ես դու՞րս գալ հաշվից</h2>
+                        <button id="durs-gal" type="button">Դուրս գալ</button>
+                    </div>
                 </div>
             </div>
-            <br><br><br><br><br><br>
             <div class="navi-tak">
                 <video src="./VITA/anim 0f0f0f.mp4" autoplay muted height="100.1%" width="100.1%"></video>
             </div>
-            <br><br>
         </section>
     </header>
     <main>
         <section id="kofener">
             <h2>ՍՈՒՐՃԵՐԻ ԲԱԺԻՆ</h2>
-            <br><br>
-            <div class="a1">
-                <div class="esim">
-                    <div class="verevi-tox">
-                        <div><a href="./Arabica.html"><img class="arajin-qart" src="./VITA/Arabika.qart.jpg" alt=""></a></div>
-                        <div><a href="./Robusta.html"><img class="arajin-qart" src="./VITA/Robusta.qart.jpg" alt=""></a></div>
-                    </div>
-                    <br><br>
-                    <div class="nerqevi-tox">
-                        <div><a href="./Cappuccino.html"><img class="arajin-qart" src="./VITA/Kapuchino.qart.jpg" alt=""></a></div>
-                        <div><a href="./Latte.html"><img class="arajin-qart" src="./VITA/Latte.qart.jpg" alt=""></a></div>
-                    </div>
+            <div class="esim">
+                <div class="qarter">
+                    <a href="./Arabica.html"><img class="arajin-qart" src="./VITA/Arabika.qart.jpg" alt=""></a>
+                    <a href="./Robusta.html"><img class="arajin-qart" src="./VITA/Robusta.qart.jpg" alt=""></a>
+                    <a href="./Cappuccino.html"><img class="arajin-qart" src="./VITA/Kapuchino.qart.jpg" alt=""></a>
+                    <a href="./Latte.html"><img class="arajin-qart" src="./VITA/Latte.qart.jpg" alt=""></a>
                 </div>
-                
                 <div>
-                    <video class="gifik" src="./VITA/YEEEEE.mp4     " width="100%" height="100%" autoplay muted loop></video>
+                    <video class="gifik" src="./VITA/YEEEEE.mp4     " autoplay muted loop></video>
                 </div>
             </div>
-            <br><br>
         </section>
 
         <section id="chayer">
             <h2>ԹԵՅԵՐԻ ԲԱԺԻՆ</h2>
-            <br><br>
-            <div class="a1">
+            <div class="esim">
                 <div>
                     <video class="gifik" src="./VITA/yeye.mp4" autoplay muted loop></video>
                 </div>
-
-                <div class="esim">
-                    <div class="verevi-tox">
-                        <div><a href=""><img class="arajin-qart" src="./VITA/sev.qart.jpg" alt=""></a></div>
-                        <div><a href=""><img class="arajin-qart" src="./VITA/xotabuys.qart.jpg" alt=""></a></div>
-                    </div>
-                    <br><br>
-                    <div class="nerqevi-tox">
-                        <div><a href=""><img class="arajin-qart" src="./VITA/kanach.qart.jpg" alt=""></a></div>
-                        <div><a href=""><img class="arajin-qart" src="./VITA/urc.qart.jpg" alt=""></a></div>
-                    </div>
+                <div class="qarter">
+                    <a href="./Black.html"><img class="arajin-qart" src="./VITA/sev.qart.jpg" alt=""></a>
+                    <a href="./Herbal.html"><img class="arajin-qart" src="./VITA/xotabuys.qart.jpg" alt=""></a>
+                    <a href="./Green.html"><img class="arajin-qart" src="./VITA/kanach.qart.jpg" alt=""></a>
+                    <a href="./Mint.html"><img class="arajin-qart" src="./VITA/urc.qart.jpg" alt=""></a>
                 </div>
             </div>
-            <br><br>
         </section>
-
         <section id="seter">
-            <h2>ՍԵԹԵՐ</h2>
-            <br><br>
-            <a href="">
-                <div class="arajin-set">
-                    <br><br>
-                    <h2>ՍՈՒՐՃԻ ՍԵԹ</h2>
-                    <div class="arajin-set1">
-                        <ul>
-                            <li>1 փաթեթ Արաբիկա</li>
-                            <br><br>
-                            <li>1 փաթեթ Ռոբուստա</li>
-                            <br><br>
-                            <li>1 փաթեթ Կապուչինո</li>
-                        </ul>
-                    </div>
+        <h2>ՍԵԹԵՐ</h2>
+        <a href="./kofe.html">
+            <div class="arajin-set">
+                <h2 class="vernagir">ՍՈՒՐՃԻ ՍԵԹ</h2>
+                <div></div>
+                <div></div>
+                <div class="arajin-set1">
+                    <ul>
+                        <li>1 փաթեթ Արաբիկա</li>
+                        <li>1 փաթեթ Ռոբուստա</li>
+                        <li>1 փաթեթ Կապուչինո</li>
+                    </ul>
                 </div>
-            </a>
-            <br><br>
-            <a href="">
-                <div class="erkrord-set">
-                    <br><br>
-                    <h2>ԹԵՅԻ ՍԵԹ</h2>
-                    <div class="arajin-set1">
-                        <ul>
-                            <li>1 փաթեթ Սև թեյ</li>
-                            <br><br>
-                            <li>1 փաթեթ Կանաչ թեյ</li>
-                            <br><br>
-                            <li>1 փաթեթ Խոտաբուսային թեյ</li>
-                        </ul>
-                    </div>
+            </div>
+        </a>
+        <a href="./chay.html">
+            <div class="erkrord-set">
+                <h2 class="vernagir">ԹԵՅԻ ՍԵԹ</h2>
+                <div></div>
+                <div></div>
+                <div class="arajin-set1">
+                    <ul>
+                        <li>1 փաթեթ Սև թեյ</li>
+                        <li>1 փաթեթ Կանաչ թեյ</li>
+                        <li>1 փաթեթ Խոտաբույսային թեյ</li>
+                    </ul>
                 </div>
-            </a> 
-            <br><br> 
-        </section>      
+            </div>
+        </a> 
+    </section>    
         <section id="mer-masin">
             <h2>ՄԵՐ ՄԱՍԻՆ</h2>
-            <br><br>
             <div class="mer-masin1">
                 <div class="taki-text">
-                    <h3>VITA — Քո Օրվա Ռիթմի Համեր</h3><br>
+                    <h3>VITA — Քո Օրվա Ռիթմի Համեր</h3>
                     <p>VITA-ն սուրճի և թեյի հավաքածու է, որը ստեղծված է ձեր օրվա ռիթմը լրացնելու համար։ Այստեղ ըմպելիքները պարզապես զովացուցիչ չեն, այլ փորձառություններ, որոնք էներգիան համադրում են հանգստության հետ՝ առաջարկելով բարձրորակ, պարզ և հասկանալի ընտրություն՝ ցանկացած տրամադրության համար։
-VITA-ի յուրաքանչյուր բաժակ իր պատմությունն է պատմում։ Սուրճի և թեյի աշխարհը պետք է հասանելի լինի բոլորին, այդ իսկ պատճառով մանրակրկիտ ընտրված տեսականին ապահովում է, որ յուրաքանչյուր տեսակ ունենա իր ուրույն համը, տրամադրությունը և կատարյալ պահը։ Անկախ նրանից, թե ձեր նպատակն է արթնացնող էսպրեսոն՝ օրը սկսելու համար, թե հանգստացնող բուսական թեյը՝ երկար օրվանից հետո թուլանալու համար, VITA-ն առաջարկում է կատարյալ ընտրություն։</p><br>
+VITA-ի յուրաքանչյուր բաժակ իր պատմությունն է պատմում։ Սուրճի և թեյի աշխարհը պետք է հասանելի լինի բոլորին, այդ իսկ պատճառով մանրակրկիտ ընտրված տեսականին ապահովում է, որ յուրաքանչյուր տեսակ ունենա իր ուրույն համը, տրամադրությունը և կատարյալ պահը։ Անկախ նրանից, թե ձեր նպատակն է արթնացնող էսպրեսոն՝ օրը սկսելու համար, թե հանգստացնող բուսական թեյը՝ երկար օրվանից հետո թուլանալու համար, VITA-ն առաջարկում է կատարյալ ընտրություն։</p>
                     
                 </div>
-                <br>
                 <div class="taki-qart">
                     <h3>Մեզ համար առաջնային էն` </h3>
-                    <br>
                     <div class="taki-qart1">
                         <h4>Որակ</h4>
                         <p>VITA-ն անզիջում է որակի հարցում: Ընտրվում են միայն լավագույն սուրճի հատիկներն ու թեյի տերևները՝ աշխարհի առաջատար պլանտացիաներից: Յուրաքանչյուր ըմպելիքի բաժակ պետք է կատարյալ լինի՝ ապահովելով անթերի համ և բարձրագույն որակ։</p>
                     </div>
-                    <br>
                     <div class="taki-qart2">
                         <h4>Թարմություն</h4>
-                        <p>Թարմությունը VITA-ի համար առաջնահերթություն է: Սուրճը բովվում է փոքր խմբաքանակներով, իսկ թեյը փաթեթավորվում է բերքահավաքից անմիջապես հետո: Ապրանքները հասնում են սպառողին առավելագույն թարմությամբ՝ պահպանելով իրենց բնական բույրն ու համը։</p>
+                        <p>Թարմությունը VITA-ի համար առաջնահերթություն է: Սուրճը բովվում է փոքր խմբաքանակներով, իսկ թեյը փաթեթավորվում է բերքահավաքից անմիջապես հետո: Ապրանքները հասնում են սպառողին առավելագույն թարմությամբ՝ պահպանելով իրենց բույրն ու համը։</p>
                     </div>
-                    <br>
                     <div class="taki-qart3">
                         <h4>Բնական Բաղադրություն</h4>
                         <p>VITA-ն հավատարիմ է բնականությանը: Բոլոր արտադրանքները բացառապես բնական են՝ զերծ արհեստական հավելանյութերից, կոնսերվանտներից կամ գունանյութերից։ Առաջարկվում է բնության իսկական համը՝ առողջ և էներգիայով լի։</p>
@@ -169,35 +162,63 @@ VITA-ի յուրաքանչյուր բաժակ իր պատմությունն է �
                 </div>
             </div>
         </section>
-    </main>
-    
-    <footer>
-        <div class="nerqev">
-            <br>
-            <div class="kontakt">
-                <br><br>
-                <h3>Կոնտակտային Տվյալներ</h3>
-                <br><br><br>
-                <p>Հեռախոսահամար - 093 583 255 / 091 583 255</p>
-                <br>
-                <p>Էլ․ Փոստ - teacoffeevita@gmail.com</p>
-                <br><br><br>
-            </div>
-            <div class="gic1">
-                <div class="gic"></div>
-            </div>
-            <div class="soc">
-                <br><br>
-                <h3>Հետևեք Մեզ</h3>
-                <br><br><br>
-                <div class="taki-iconner">
-                    <a href="https://www.tiktok.com/@coffee_vita?is_from_webapp=1&sender_device=pc" target="_blank"><img width="60px" src="./nkar/tiktok.png" alt=""></a>
-                    <a href="https://www.instagram.com/tea_coffee_vita/?utm_source=ig_web_button_share_sheet" target="_blank"><img width="60px" src="./nkar/insta.png" alt=""></a>
-                    <a href="https://youtube.com/@vita-b4t7i?si=NmWYcX5EXjnnxE8d" target="_blank"><img width="80px" src="./nkar/Youtube.png" alt=""></a>
+        <section id="contact-us">
+            <h2 class="vernagir">Կապ</h2>
+            <div class="mail-anel">
+
+                <div class="mail-anel-vrenagrer">
+                    <h3>Հետադարձ կապ</h3>
+                    <h3> Կիսվել</h3>
                 </div>
+
+                <form id="contact-form" novalidate>
+                    <div class="field">
+                        <input type="text" id="name" name="name" placeholder="Անուն">
+                        <small class="error" data-error-for="name"></small>
+                    </div>
+                    <div class="field">
+                        <textarea name="namak" id="namak" placeholder="Մուտքագրեք մանրամասներ ձեր հարցի մասին"></textarea>
+                        <small class="error" data-error-for="namak"></small>
+                    </div>
+                    <button type="submit" id="submit-btn">Ուղարկել</button>
+                </form>
+
+                <div class="share-this">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://yoursite.com" target="_blank"><img src="./nkar/square-facebook-brands-solid.png" alt="">FACEBOOK</a>
+                    <a href="https://twitter.com/intent/tweet?url=https://yoursite.com&text=Check%20this%20out" target="_blank"><img src="./nkar/square-x-twitter-brands-solid.png" alt="">TWITTER</a>
+                    <a href="https://t.me/share/url?url=https://yoursite.com&text=Check%20this%20out" target="_blank"><img src="./nkar/telegram-brands-solid.png" alt="">TELEGRAM</a>
+                    <a href="https://vk.com/share.php?url=https://yoursite.com" target="_blank"><img src="./nkar/vk-brands-solid.png" alt="">VK</a>
+                </div>
+
             </div>
+            <div class="qartez">
+                <div class="soc">
+                    <h3>Հետևեք մեզ</h3>
+                    <a href="https://www.tiktok.com/@coffee_vita?is_from_webapp=1&sender_device=pc" target="_blank">
+                        <img class="taki-iconner" src="./nkar/tiktok.jpg" alt="TikTok">TIKTOK
+                    </a>
+                    <a href="https://www.instagram.com/tea_coffee_vita/?utm_source=ig_web_button_share_sheet" target="_blank">
+                        <img class="taki-iconner" src="./nkar/instagram.jpg" alt="Instagram">INSTAGRAM
+                    </a>
+                    <a href="https://youtube.com/@vita-b4t7i?si=NmWYcX5EXjnnxE8d" target="_blank">
+                        <img class="taki-iconner" src="./nkar/youtube.jpg" alt="YouTube">YOUTUBE
+                    </a>
+                </div>
+                <h3>Մեր հասցեն</h3>
+                <iframe class="qartez1"
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A02c78979216c02e210a97b37ed1d257d75808078a8ffe652785b7566a1fcb250&amp;source=constructor">
+                </iframe>
+            </div>
+        </section>
+    </main>
+    <footer id="footerik">
+        <div class="nerqev">
+                <p>Հեռախոսահամար - 093 583 255 / 091 583 255</p>
+                <p><a style="text-decoration: none;color: #eaeaea;" href="mailto:teacoffeevita@gmail.com">Էլ․ Փոստ - teacoffeevita@gmail.com</a></p>
+                <a style="text-decoration: none;color: #eaeaea;" href="./privacy.html">Գաղտնիության քաղաքականություն</a>
         </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="./script.js" defer></script>
 </body>
 </html>

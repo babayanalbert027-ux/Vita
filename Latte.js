@@ -58,12 +58,12 @@ minus.addEventListener("click", ()=>{
 let zagruzka = document.getElementById('zagruzka');
 setTimeout(() =>{
     zagruzka.classList.add("pahel");
-},1700);
+},1100);
 
 let zambyux = document.getElementById('zambyux');
 let apranq = {
     id:4,
-    anun:"Լատտե",
+    anun:"Սուրճ լատտե",
     gin:2500,
     nkar:"./VITA/Latte.qart.jpg"
 }

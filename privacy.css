@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "AtyanDsegh";
+    src: url("./font/Montserratarm-Regular.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "AtyanDsegh1";
+    src: url("./font/Montserratarm-Thin.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "AtyanDsegh3";
+    src: url("./font/Montserratarm-SemiBold.otf") format("truetype");
+}
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0f0f0f;
+    color: #eaeaea;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+.privacy-back{
+    position: fixed;
+    top: 1.5vw;
+    left: 1.5vw;
+    z-index: 1000;
+}
+.het-glavni{
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.8vw;
+    border: 0.15vw solid rgb(117,43,0);
+    background: rgba(24,24,24,0.75);
+    backdrop-filter: blur(8px);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.het-glavni span{
+    color: #eaeaea;
+    font-size: 1.4vw;
+    transition: 0.3s ease;
+}
+.het-glavni:hover{
+    border-color: #f02d06;
+    box-shadow: 0 0 1rem rgba(240,45,6,0.35);
+    transform: translateY(-0.17vw);
+}
+.het-glavni:hover span{
+    color: #f02d06;
+}
+.privacy-main{
+    padding: 7vw 5vw 4vw;
+    min-height: 100vh;
+}
+.privacy-container{
+    width:100%;
+    margin: 0 auto;
+    display: grid;
+    gap: 2vw;
+}
+.privacy-header{
+    display: grid;
+    gap: 1vw;
+    text-align: center;
+}
+.privacy-header h1{
+    font-size: 4vw;
+    color: #f02d06;
+    font-family: "AtyanDsegh3";
+}
+.privacy-header p{
+    font-size: 1.15vw;
+    line-height: 1.8;
+    color: #eaeaea;
+    font-family: "AtyanDsegh";
+}
+.privacy-section{
+    display: grid;
+    gap: 1vw;
+    padding: 1.6vw;
+    border-radius: 1.2vw;
+    border: 0.15vw solid rgb(117,43,0);
+    background: rgba(24,24,24,0.65);
+    backdrop-filter: blur(8px);
+    transition: 0.3s ease;
+}
+.privacy-section:hover{
+    border-color: #f02d06;
+    box-shadow: 0 0 1.5rem rgba(240,45,6,0.25);
+}
+.privacy-section h2{
+    color: #f02d06;
+    font-size: 2vw;
+    font-family: "AtyanDsegh3";
+}
+.privacy-section p,
+.privacy-section li{
+    font-size: 1.05vw;
+    line-height: 1.8;
+    color: #d7d7d7;
+    font-family: "AtyanDsegh";
+}
+.privacy-section ul{
+    padding-left: 1.6vw;
+    display: grid;
+    gap: 0.5vw;
+}
+.privacy-contact{
+    display: grid;
+    gap: 0.5vw;
+}
+.privacy-contact a{
+    color: #f02d06;
+    transition: 0.3s ease;
+}
+.privacy-contact a:hover{
+    color: #eaeaea;
+}

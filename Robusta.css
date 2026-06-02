@@ -23,54 +23,46 @@
 }
 body{
     background-color: #0f0f0f;
-    padding: 5px 15px 0 15px;
+    padding: 1.4vh 1.4vw;
 }
 .het-glavni{
-    margin: 20px 5px;
-    width: 30px;
-    height: 30px;
+    width: 2vw;
+    height: 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 4px;
+    border-radius: 0.3vw;
+    font-size: 1vw;
     background-color: #252525;
-    position: fixed;
 }
 .verev>a{
     color: #eaeaea;
     text-decoration: none;
 }
-.text>h1{
-    font-family: "AtyanDsegh1";
-    color: #eaeaea;
-    display: flex;
-    font-size: 40px;
-}
 .himn{
-    padding: 15px 70px;
-    display: flex;
-
+    display: grid;
+    grid-template-columns: 0.1fr 0.6fr auto;
+    column-gap: 2vw;
 }
 .taki-nkarner{
-    display: flex;
+    display:grid;
+    width: 38vw;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+    column-gap: 0.5vw;
     align-items: center;
-    gap: 7px;
 }
 #nkar{
-    width: 550px;
+    width: 38vw;
     box-shadow: 0 0 30px ;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    margin-right: 50px;
+    border-radius: 1.5vw;
 }
 .taki.aktiv{
     border: 2px solid #f02d06;
     opacity: 1;
 }
 .taki{
-    width: 122px;
-    border-radius: 10px;
-    border: 2px solid #eaeaea;
+    width: calc(31.5vw / 4);
+    border-radius: 1vw;
     opacity: 0.4;
     cursor: pointer;
 }
@@ -78,38 +70,51 @@ body{
 #aj{
     background: none;
     border: none;
-    font-size: 25px;
+    font-size: 2vw;
     color: #eaeaea;
     cursor: pointer;
 }
+.text{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto 0.1fr;
+    height: 94.4%;
+}
+.text>h1{
+    font-family: "AtyanDsegh1";
+    color: #eaeaea;
+    font-size: 2.75vw;
+}
 .gram{
     font-family: "AtyanDsegh";
-    font-size: 25px;
+    font-size: 1.7vw;
     color: #f02d06;
 }
 .bnutagir{
     font-family: "AtyanDsegh1";
-    font-size: 20px;
+    font-size: 1.3vw;
+    line-height: 1.55;
     color: #eaeaea;
 }
 .hatkanish{
+    gap: 1vw;
     font-family: "AtyanDsegh2";
     display: flex;
     align-items: center;
     color: #eaeaea;
-    gap: 10px;
+    font-size: 1.5vw;
 }
 .gin{
     font-family: "AtyanDsegh";
-    font-size: 35px;
+    font-size: 2.4vw;
     color: #f02d06;
 }
 #gnum{
-    display: flex;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
 }
 #minus,
 #plus{
-    font-size: 25px;
+    font-size: 1.7vw;
     background: none;
     border: none;
     color: #f02d06;
@@ -117,24 +122,20 @@ body{
 }
 #qanak{
     font-family: "AtyanDsegh2";
-    font-size: 25px;
+    font-size: 1.7vw;
     color: #eaeaea;
-    width: 45px;
+    width: 3.1vw;
     display: flex;
     justify-content: center;
 }
 .qanak{
     display: flex;
-}
-#gnum{
-    display: flex;
     align-items: center;
-    gap: 50px;
 }
 #zambyux{
     font-family: "AtyanDsegh2";
-    width: 210px;
-    height: 40px;
+    width: 14.8vw;
+    height: 2.8vw;
     background: #f02d0661;
     border: 2px solid #f02d06;
     color: #eaeaea;
@@ -143,13 +144,18 @@ body{
     align-items: center;
     gap: 5px;
     cursor: pointer;
+    font-size: 1vw;
+    transition: 0.1s;
+}
+#zambyux:active{
+    transform: scale(0.9);
 }
 #zagruzka{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     z-index: 9999;
     transition: 0.5s;
@@ -157,4 +163,58 @@ body{
 #zagruzka.pahel{
     opacity: 0;
     visibility: hidden;
+}
+@media (max-width: 480px){
+    .het-glavni{
+        width: 4vw;
+        height: 4vw;
+        font-size: 2vw;
+    }
+    .himn{
+        grid-template-columns: 1fr;
+    }
+    #nkar{
+        width: 90%;
+    }
+    .nkar1{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2vw;
+    }
+    .nkarner{
+        justify-items: center;
+    }
+    .taki-nkarner{
+        width: 90%;
+        gap: 1vw;
+    }
+    .taki{
+        width: 100%;
+    }
+    .text{
+        justify-items: center;
+        gap: 4vw;
+    }
+    .text h1,
+    .text p,
+    .text div{
+        width: 90%;
+    }
+    .text h1{
+        font-size: 5vw;
+        text-align: center;
+    }
+    .text p{
+        font-size: 3vw;
+    }
+    #qanak,
+    #minus,
+    #plus,
+    #zambyux{
+        font-size: 3vw;
+    }
+    #zambyux{
+        width: 40vw;
+        height: 10vw;
+    }
 }

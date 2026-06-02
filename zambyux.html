@@ -7,18 +7,54 @@
     <link rel="stylesheet" href="zambyux.css">
 </head>
 <body>
-    <div class="verev">
-        <a href="./index.html#kofener"><div class="het-glavni"><span id="het-glavni">❮</span></div></a>
-        <h1>ԶԱՄԲՅՈՒՂ</h1>
-    </div>
-    <br><br>
-    <div class="patuhan">
-        <div id="obyektner">
-
+    <div>
+        <div class="verev">
+            <a href="./index.html#kofener"><div class="het-glavni"><span id="het-glavni">❮</span></div></a>
+            <h1>ԶԱՄԲՅՈՒՂ</h1>
         </div>
+        <div id="popup">
+            <div id="popup-alert">
+                <img src="./nkar/ptichka.png" alt="">
+                <p id="alert-text">Ձեր պատվերը հաջողությամբ հաստատվել է:</p>
+            </div>
+        </div>
+        <div class="patuhan">
+            <div id="obyektner">
 
-        <div id="panel">
-
+            </div>
+            <div>
+                <div id="panel">
+                    <div style="display: flex; align-items: center; gap: 1vw;">
+                        <h3 style="color: #eaeaea;">Ընդհանուր ապրանքների քանակը:</h3>
+                        <span id="yndhanur-qanak" style="color: #f02d06; font-size: 1.5vw;"></span>
+                    </div>
+                    <div>
+                        <h3 style="width: 100%;text-align: center; color: #eaeaea; margin-bottom: 0.5vw;">Առաքման եղանակ</h3>
+                        <div style="display: flex; justify-content: center; align-items: center; gap: 1vw; color: #f02d06;">
+                            <input type="radio" name="araqum" id="araqich" value="araqich" style="width: 1.5vw;">
+                            <span>Առաքիչի միջոցով</span>
+                            <input type="radio" name="araqum" id="texum" value="texum" style="width: 1.5vw;">
+                            <span>Ինքս կվերցնեմ</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1vw;">
+                        <h3 style="color: #eaeaea;">Ընդհանուր գումարը:</h3>
+                        <span id="gumar" style="color: #f02d06; font-size: 1.5vw;"></span>
+                    </div>
+                    <div>
+                        <h3 style="width: 100%;text-align: center; color: #eaeaea;margin-bottom: 0.5vw;">Վճարման եղանակ</h3>
+                        <div style="display: flex; justify-content: center; align-items: center; gap: 1vw; color: #f02d06;">
+                            <input type="radio" name="vjarum" id="kanxik" value="kanxik" style="width: 1.5vw;">
+                            <span>Կանխիկ</span>
+                            <input type="radio" name="vjarum" id="qartov" value="qartov" style="width: 1.5vw;">
+                            <span>Քարտով</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <button id="patvirel">Պատվիրել</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="zambyux.js"></script>

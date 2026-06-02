@@ -4,12 +4,11 @@ let aj = document.getElementById('aj')
 let dzax = document.getElementById('dzax')
 
 let nkarner =[
-    "VITA/Arabika.qart.jpg",
+    "VITA/kofe set.jpg",
     "nkar/Arabic.jpg",
-    "nkar/kofe1.jpg",
-    "nkar/kofe2.jpg"
+    "nkar/Kapuchin.jpg",
+    "nkar/Robust.jpg"
 ];
-
 let hamar = 0;
 function poxel() {
     mec.src = nkarner[hamar];
@@ -62,10 +61,10 @@ setTimeout(() =>{
 
 let zambyux = document.getElementById('zambyux');
 let apranq = {
-    id:1,
-    anun:"Սուրճ արաբիկա",
-    gin:2500,
-    nkar:"./VITA/Arabika.qart.jpg"
+    id:9,
+    anun:"Սուրճի սեթ",
+    gin:6500,
+    nkar:"./VITA/kofe set.jpg"
 }
 zambyux.addEventListener("click", ()=>{
     let qart = JSON.parse(localStorage.getItem("qart")) || [];
