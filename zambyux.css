@@ -53,7 +53,7 @@ body{
 }
 .patuhan{
     display: grid;
-    grid-template-columns: 0.7fr 0.3fr;
+    grid-template-columns: 1.35fr 0.65fr;
     gap: 3vw;
     margin: 1vw 0;
 }

@@ -571,10 +571,10 @@ main section h2{
     grid-template-columns: 1fr;
     grid-template-rows: 0.4fr 0.1fr 1.5fr;
     gap: 1vw;
-    background: rgba(8,8,8,0.96);
     border: 0.15vw solid rgb(117,43,0);
     border-radius: 1.7vw;
     padding: 2.2vw;
+    inset: 0 0 1vw rgba(255,255,255,0.03);
 }
 .qartez1{
     width: 100%;
@@ -588,7 +588,6 @@ main section h2{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1vw;
-    box-shadow: 0 0 2vw rgba(0,0,0,0.5);
 }
 .soc h3{
     grid-column: 1 / span 3;
@@ -627,10 +626,6 @@ main section h2{
     color: #ff6868;
     font-size: 0.72vw;
 }
-
-
-
-
 footer{
     background-color: #181818;
     padding: 2vw 3%;
