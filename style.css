@@ -798,9 +798,13 @@ footer{
     .ull{
         display: none;
         font-size: 2vw;
+        gap: 2vw;
+    }
+    nav{
+        padding: 1vw;
     }
     .ull li a{
-        font-size: 1.7vw;
+        font-size: 2vw;
     }
     .ull.aktiv{
         display: flex;
@@ -809,5 +813,9 @@ footer{
         display: block;
         cursor: pointer;
     }
-    
+    #join{
+        width: 12vw;
+        height: 4vw;
+        font-size: 2vw;
+    }
 }

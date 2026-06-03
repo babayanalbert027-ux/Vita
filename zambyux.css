@@ -179,6 +179,11 @@ body{
     width: 3vw;
     height: 3vw;
 }
+#gumar,
+#yndhanur-qanak{
+    font-size: 1.5vw;
+}
+
 @media(max-width: 480px){
     .het-glavni{
         width: 4vw;
@@ -186,16 +191,34 @@ body{
         font-size: 2vw;
     }
     .patuhan{
-        grid-template-columns: 1.2fr 1.5fr;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 4vw;
+    }
+    #obyektner{
+        grid-row: 2;
+        gap: 2vw;
     }
     #panel{
-        width: 50vw;
+        grid-row: 1;
+        width: 70vw;
         padding: 1.5vw;
-        font-size: 1.8vw;
+        font-size: 2.5vw;
+        position: relative;
+    }
+    #gumar,
+    #yndhanur-qanak{
+        font-size: 2.5vw;
+    }
+    #patvirel{
+        width: 14vw;
+        height: 5vw;
+        font-size: 2vw;
     }
     .qart{
-        height: 15vw;
-        grid-template-columns: 0.2fr 1.8fr 0.15fr;
+        height: 100%;
+        width: 90vw;
+        grid-template-columns: 0.2fr 1.8fr 0.08fr;
     }
     .nkar{
         height: 14vw;
@@ -206,8 +229,5 @@ body{
     .minus,
     .plus{
         font-size: 3vw;
-    }
-    .pakel{
-        height: 100%;
     }
 }
