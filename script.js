@@ -307,10 +307,28 @@ contactForm.addEventListener("submit", function(e) {
         alert("Սխալ է տեղի ունեցել");
     });
 });
+
 let burger = document.getElementById('burger');
-let ull = document.getElementsByClassName('ull')[0];
+let burger2 = document.getElementById('burger2');
+let mobileNavbar = document.getElementsByClassName('mobile-navbar')[0];
 burger.addEventListener("click",()=>{
-
-    ull.classList.toggle("aktiv");
-
+    mobileNavbar.classList.add("aktiv");
+    nav.style.display = "none"
+    burger2.style.display = "block"
+    document.body.style.overflow="hidden"
 });
+burger2.addEventListener("click",()=>{
+    mobileNavbar.classList.remove("aktiv");
+    nav.style.display = "flex"
+    burger2.style.display = "none"
+    document.body.style.overflow="auto"
+})
+let aaa = document.getElementsByClassName('aaa');
+for(let i = 0; i< aaa.length; i++){
+    aaa[i].addEventListener("click",()=>{
+    mobileNavbar.classList.remove("aktiv");
+    nav.style.display = "flex"
+    burger2.style.display = "none"
+    document.body.style.overflow="auto"
+})
+}
